@@ -6,12 +6,85 @@ primary color variable below.
 */
 
 .container {
-    background-color: #C8BBBB;
+	background-color: #C8BBBB;
 }
 
+title {
+	font-family: "Sansita", sans-serif;
+    color: #755B5B;
+}
+
+/* Define styles for h2 and ul */
+h2, ul {
+    font-family: "Sansita", sans-serif;
+    color: #755B5B;
+}
+
+/* Define styles for list items */
+li {
+    list-style-type: button;
+}
+
+h3 {
+    color: #755B5B; /* Example color */
+}
+
+/* Define styles for h4 and h5 */
+h4, h5 {
+    color: #755B5B; /* Example color */
+}
+
+/* style.css */
+
+/* Define styles for content-container */
+.content-container {
+    margin: 20px;
+}
+
+/* Define styles for keyword-list */
+.keyword-list {
+    padding: 0;
+    list-style: none;
+}
+
+/* Define styles for keyword-list items */
+.keyword-list .keyword {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #755B5B; 
+    color: #C8BBBB; 
+    border-radius: 20px; 
+    cursor: pointer;
+}
+
+/* Define hover styles for keyword-list items */
+.keyword-list .keyword:hover {
+    background-color: #755B5B; 
+}
+
+/* Define selected styles for keyword-list items */
+.keyword-list .keyword.selected {
+    background-color: #755B5B; 
+}
+
+/* Define styles for button */
+button {
+    padding: 10px 20px;
+    background-color: #755B5B; /* Example background color */
+    color: #C8BBBB; /* Example text color */
+    border: none;
+    cursor: pointer;
+}
+
+/* Define hover styles for button */
+button:hover {
+    background-color: #755B5B; /* Example background color on hover */
+}
+
+
 :root {
-	--color-primary: #755B5B;
-	--color-secondary: #c00;
+	--color-primary: #;
 }
 
 /*
@@ -26,9 +99,7 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-h1 {
-	color: var(--color-primary);
-}
+
 
 /* This uses the same value as --size-xs. */
 @media screen and (width >= 320px) {
