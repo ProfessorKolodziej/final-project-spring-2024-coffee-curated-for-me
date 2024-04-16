@@ -5,8 +5,12 @@ Try changing the color from blue to red in the
 primary color variable below.
 */
 
+.container {
+    background-color: #C8BBBB;
+}
+
 :root {
-	--color-primary: blue;
+	--color-primary: #755B5B;
 	--color-secondary: #c00;
 }
 
