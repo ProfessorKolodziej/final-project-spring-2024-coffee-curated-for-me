@@ -1,16 +1,11 @@
-/*
-CSS controls the styling of the page.
-You can write a color in directly, or use variables.
-Try changing the color from blue to red in the
-primary color variable below.
-*/
-
+/* Define styles for .container */
 .container {
-	background-color: #C8BBBB;
+    background-color: #C8BBBB;
 }
 
-title {
-	font-family: "Sansita", sans-serif;
+/* Define styles for title */
+.title {
+    font-family: "Sansita", sans-serif;
     color: #755B5B;
 }
 
@@ -25,86 +20,78 @@ li {
     list-style-type: button;
 }
 
+/* Define styles for h3 */
 h3 {
-    color: #755B5B; /* Example color */
+    color: #755B5B;
 }
 
 /* Define styles for h4 and h5 */
 h4, h5 {
-    color: #755B5B; /* Example color */
+    color: #755B5B;
 }
 
-/* style.css */
-
-/* Define styles for content-container */
+/* Define styles for .content-container */
 .content-container {
     margin: 20px;
 }
 
-/* Define styles for keyword-list */
+/* Define styles for .keyword-list */
 .keyword-list {
     padding: 0;
     list-style: none;
 }
 
-/* Define styles for keyword-list items */
+/* Define styles for .keyword-list items */
 .keyword-list .keyword {
     display: inline-block;
     margin-right: 10px;
     padding: 5px 10px;
-    background-color: #755B5B; 
-    color: #C8BBBB; 
-    border-radius: 20px; 
+    background-color: #755B5B;
+    color: #C8BBBB;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-/* Define hover styles for keyword-list items */
+/* Define hover styles for .keyword-list items */
 .keyword-list .keyword:hover {
-    background-color: #755B5B; 
+    background-color: #755B5B;
 }
 
-/* Define selected styles for keyword-list items */
+/* Define selected styles for .keyword-list items */
 .keyword-list .keyword.selected {
-    background-color: #755B5B; 
+    background-color: #755B5B;
 }
 
 /* Define styles for button */
 button {
     padding: 10px 20px;
-    background-color: #755B5B; /* Example background color */
-    color: #C8BBBB; /* Example text color */
+    background-color: #755B5B;
+    color: #C8BBBB;
     border: none;
     cursor: pointer;
 }
 
 /* Define hover styles for button */
 button:hover {
-    background-color: #755B5B; /* Example background color on hover */
+    background-color: #755B5B;
 }
 
-
-:root {
-	--color-primary: #;
+/* Media Query for iPad */
+@media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+    .content-container {
+        margin: 0 auto;
+        max-width: 768px;
+    }
 }
 
-/*
-CSS doesn't allow variables to be used in media
-queries just yet, but you can use these values
-to help you out.
-
-	--size-xs: 320px;
-	--size-sm: 480px;
-	--size-md: 768px;
-	--size-lg: 1024px;
-	--size-xl: 1200px;
-*/
-
-
-
-/* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
-	.content-container {
-		margin: 0 auto;
-		max-width: 768px;
-	}
+/* Media Query for iPhone */
+@media only screen 
+    and (max-device-width: 480px) {
+    .content-container {
+        margin: 0 auto;
+        max-width: 320px;
+    }
 }
