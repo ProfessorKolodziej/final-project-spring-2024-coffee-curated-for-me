@@ -37,5 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// For the Index HTML 
