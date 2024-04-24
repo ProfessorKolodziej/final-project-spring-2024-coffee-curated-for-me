@@ -6,21 +6,36 @@
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
 
-/* JavaScript for setting primary color variable */
-document.documentElement.style.setProperty('--color-primary', '#');
+// For the Keywords Page
+document.addEventListener("DOMContentLoaded", () => {
+    const keywords = document.querySelectorAll('.keyword');
+    const MAX_ACTIVE_KEYWORDS = 3;
+    let activeKeywords = [];
 
-/* JavaScript for media queries */
-window.addEventListener('resize', function() {
-    if (window.innerWidth >= 768) {
-        document.querySelector('.content-container').style.margin = '0 auto';
-        document.querySelector('.content-container').style.maxWidth = '768px';
-    } else if (window.innerWidth <= 480) {
-        document.querySelector('.content-container').style.margin = '0 auto';
-        document.querySelector('.content-container').style.maxWidth = '320px';
-    }
+    keywords.forEach(button => {
+        button.addEventListener('click', function() {
+            const isActive = button.classList.contains('active');
+            
+            // If the button is already active and it's clicked, deactivate it
+            if (isActive) {
+                button.classList.remove('active');
+                activeKeywords = activeKeywords.filter(activeButton => activeButton !== button);
+                return;
+            }
+            
+            // If the button is not active, activate it if we have less than 3 active keywords
+            if (activeKeywords.length < MAX_ACTIVE_KEYWORDS) {
+                button.classList.add('active');
+                activeKeywords.push(button);
+            } else {
+                // If we already have 3 active keywords, deactivate the oldest one and activate the clicked one
+                const buttonToDeactivate = activeKeywords.shift();
+                buttonToDeactivate.classList.remove('active');
+                button.classList.add('active');
+                activeKeywords.push(button);
+            }
+        });
+    });
 });
-document.getElementById('myImage').addEventListener('click', function() {
-    var script = document.createElement('script');
-    script.src = 'new_script.js'; // Path to the new JS file
-    document.head.appendChild(script); // You can also append to document.body if preferred
-});
+
+// For the Index HTML 

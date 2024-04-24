@@ -1,56 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Update your description here" />
-    <title>Coffee Curated for Me Final Project</title>
-    <!-- Linking the CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Curated For Me</title>
     <link href="css/style.css" rel="stylesheet">
-    <!-- Linking the font file -->
-    <link rel="stylesheet" href="path/to/font.css"> <!-- Add your font CSS file here -->
-    <!-- Adding inline CSS for background color -->
     <style>
         body {
             background-color: #C8BBBB;
+            font-family: "Outfit", sans-serif;
+            text-align: center; /* Center all text */
         }
 
         h1 {
             font-family: "Sansita", sans-serif;
+            color: #755B5B; /* Specific color for the title */
+            margin-bottom: 0.5em; /* Adjust space between h1 and h2 */
         }
 
-		h2 {
-            font-family: "Outfit";
-            src: url("path/to/Outfit-Regular.ttf") format("truetype");
+        h2 {
+            color: #755B5B; /* Same color for the subtitle */
+            font-family: "Sansita", sans-serif; /* Apply Sansita font */
         }
 
-        body {
-            font-family: "Outfit", sans-serif;
+        .container {
+            max-width: 600px; /* Set max width for the container */
+            margin: 0 auto; /* Center the container */
+            padding: 2em; /* Padding around the content */
         }
-    </style>
+
+        .enter {
+            background-color: #FFFFFF; /* Background color */
+            border: none; /* No border */
+            color: #755B5B; /* Text color */
+            padding: 10px 30px; /* Padding inside the button */
+            font-size: 1em; /* Font size */
+            border-radius: 30px; /* Rounded borders */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Transition for effects */
+            margin-top: 2em; /* Space above the button */
+        }
+
+        .enter:hover {
+            background-color: #755B5B; /* Color change on hover */
+            color: #FFFFFF; /* Text color change on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+            cursor: pointer; /* Change cursor to indicate button */
+        }
+
+        /* If you need specific styles for your buttons when they are active */
+        .keyword.active, .keyword:active {
+            background-color: #755B5B; /* Background color for active state */
+            color: #FFFFFF; /* Text color for active state */
+        }
     </style>
 </head>
-
-<!-- Second page -->
-<main class="content-container">
-    <title>Coffee Curated for Me</title>
-    <h2>Pick 3 Key Words</h2>
-    <ul class="keyword-list">
-        <li class="keyword">Love</li>
-        <li class="keyword">Friendly</li>
-        <li class="keyword">Light</li>
-        <li class="keyword">Study</li>
-        <li class="keyword">Cute</li>
-        <li class="keyword">Late-Night</li>
-        <li class="keyword">Conversations</li>
-        <li class="keyword">Fun</li>
-        <li class="keyword">Dark</li>
-        <li class="keyword">Cozy</li>
-        <li class="keyword">Intense</li>
-        <li class="keyword">Quick</li>
-        <li class="keyword">Cultural</li>
-    </ul>
-    <button>Enter!</button>
-</main>
-
-       <!-- Linking the JavaScript file -->
-       <script src="js/scripts.js"></script>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coffee Curated For Me</h1>
+            <h2>Pick 3 keywords</h2>
+        </header>
+        <div class="keywords">
+            <button class="keyword">Love</button>
+            <button class="keyword">Friendly</button>
+            <button class="keyword">Light</button>
+            <button class="keyword">Study</button>
+            <button class="keyword">Cute</button>
+            <button class="keyword">Late-Night</button>
+            <button class="keyword">Conversations</button>
+            <button class="keyword">Fun</button>
+            <button class="keyword">Dark</button>
+            <button class="keyword">Cozy</button>
+            <button class="keyword">Intense</button>
+            <button class="keyword">Quick</button>
+            <button class="keyword">Cultural</button>
+        </div>
+        <footer>
+            <a href="Generating.html" style="text-decoration: none;">
+                <button class="enter">ENTER</button>
+            </a>
+        </footer>
+        <img src="images/generating.png" alt="Side Logo">
+    
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

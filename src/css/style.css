@@ -95,3 +95,34 @@ button:hover {
         max-width: 320px;
     }
 }
+.keyword.html {
+    background: #fff;
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color and background */
+}
+
+.keyword.html:active, .keyword.active {
+    background: #555;
+    color: #fff; /* Ensures text is white when the button is active */
+}
+
+
+
+.keywords {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow keyword buttons to wrap onto new lines */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px; /* Space below the keyword area */
+}
+
+.keyword {
+    border: none; /* Removes border */
+    background-color: #eee; /* Light grey background */
+    color: #333; /* Darker text for contrast */
+    padding: 10px 20px;
