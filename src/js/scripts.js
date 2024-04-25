@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectedKeywords = selectedKeywords.filter(k => k !== keywordText);
             }
 
-            console.log(selectedKeywords); // Debug: Log current selected keywords
+            console.log(selectedKeywords); 
         });
     });
 

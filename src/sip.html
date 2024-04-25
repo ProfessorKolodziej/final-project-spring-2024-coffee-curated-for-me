@@ -4,14 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Update your description here" />
     <title>Coffee Curated for Me Final Project</title>
-    <!-- Linking the CSS file -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Linking the font file -->
-    <link rel="stylesheet" href="path/to/font.css"> <!-- Replace with your actual path to font CSS -->
+    <link rel="stylesheet" href="path/to/font.css"> 
     <style>
-        /* Inline CSS */
         body {
             background-color: #C8BBBB;
             font-family: "Outfit", sans-serif;
@@ -30,31 +26,27 @@
             padding: 2em;
         }
         .order-image {
-            width: 50%; /* Adjust image size */
-            max-width: 300px; /* Add max-width to control image size */
+            width: 50%; 
+            max-width: 300px; 
             display: block;
-            margin: 0 auto; /* Center the image */
+            margin: 0 auto; 
         }
         .footer {
             margin-top: 20px;
         }
         .home-button {
-            background-color: #F1EDE9; /* Change background color */
+            background-color: #F1EDE9;
             border: none;
-            color: #755B5B; /* Set text color */
+            color: #755B5B; 
             padding: 10px 20px;
             font-size: 1em;
-            font-weight: bold; /* Make text bold */
-            text-transform: uppercase; /* Capitalize text */
+            font-weight: bold; 
+            text-transform: uppercase; 
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            display: inline-block; /* Ensure proper spacing */
+            display: inline-block; 
             transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        .home-button:hover {
-            background-color: #ccc; /* Slightly lighter shade on hover */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -66,7 +58,6 @@
 </main>
 
 <div class="footer">
-    <!-- This button is used for navigation upon keyword selection -->
     <button class="home-button">Home</button>
 </div>
 
@@ -80,42 +71,34 @@ document.addEventListener('DOMContentLoaded', function() {
     keywords.forEach(button => {
         button.addEventListener('click', function() {
             const keywordText = this.textContent.toLowerCase();
-            this.classList.toggle('active'); // Toggle the keyword active state
-            // Update selectedKeywords array
+            this.classList.toggle('active'); 
             if (selectedKeywords.includes(keywordText)) {
-                selectedKeywords = selectedKeywords.filter(k => k !== keywordText); // Remove if exists
+                selectedKeywords = selectedKeywords.filter(k => k !== keywordText); 
             } else {
-                selectedKeywords.push(keywordText); // Add if not already included
+                selectedKeywords.push(keywordText); 
             }
         });
     });
-
     document.querySelector('.home-button').addEventListener('click', function() {
         const sipKeywords = ['late-night', 'intense', 'fun'].sort();
         const currentSelection = selectedKeywords.sort();
 
-        // Check if the selected keywords match the required keywords
+       
         if (JSON.stringify(currentSelection) === JSON.stringify(requiredKeywords)) {
-            window.location.href = 'sip.html'; // Redirect to sip.html
+            window.location.href = 'sip.html'; 
         }
-        // No action if the required keywords are not selected
     });
 });
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Attach event listener to the 'Home' button
         document.querySelector('.home-button').addEventListener('click', function() {
-            window.location.href = 'index.html'; // Redirect to the home page
+            window.location.href = 'index.html'; 
         });
     
-        // Retrieve and handle selected keywords from local storage if needed
         const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
         console.log('Selected Keywords:', selectedKeywords);
-    
-        // Any other DOMContentLoaded logic can go here
     });
     </script>
-
 </body>
 </html>

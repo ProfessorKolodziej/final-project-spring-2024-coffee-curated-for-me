@@ -1,129 +1,48 @@
-/* Define styles for .container */
-.container {
+body {
     background-color: #C8BBBB;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
 }
-
-/* Define styles for title */
-.title {
+h1, h2, h3, h4, h5 {
     font-family: "Sansita", sans-serif;
     color: #755B5B;
+    margin-bottom: 0.5em; 
+}
+.container, .content-container {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 2em;
+    background-color: #C8BBBB; 
+}
+.enter, .keyword, button { 
+    padding: 10px 30px;
+    font-size: 1em;
+    border-radius: 30px;
+    background-color: #F1EDE9;
+    color: #755B5B;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-/* Define styles for h2 and ul */
-h2, ul {
+/* Hover effects for all button types */
+.enter:hover, .keyword:hover, button:hover { 
+    background-color: #D3CCC5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.keyword.active, .keyword.selected { 
+    background-color: #755B5B;
+    color: #FFFFFF;
+}
+ul, li { 
+    list-style-type: none; 
+    color: #755B5B;
     font-family: "Sansita", sans-serif;
-    color: #755B5B;
 }
-
-/* Define styles for list items */
-li {
-    list-style-type: button;
-}
-
-/* Define styles for h3 */
-h3 {
-    color: #755B5B;
-}
-
-/* Define styles for h4 and h5 */
-h4, h5 {
-    color: #755B5B;
-}
-
-/* Define styles for .content-container */
-.content-container {
-    margin: 20px;
-}
-
-/* Define styles for .keyword-list */
-.keyword-list {
-    padding: 0;
-    list-style: none;
-}
-
-/* Define styles for .keyword-list items */
-.keyword-list .keyword {
+/* Specific styles for keywords in a list */
+.keyword-list .keyword { 
     display: inline-block;
     margin-right: 10px;
     padding: 5px 10px;
     background-color: #755B5B;
-    color: #C8BBBB;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* Define hover styles for .keyword-list items */
-.keyword-list .keyword:hover {
-    background-color: #755B5B;
-}
-
-/* Define selected styles for .keyword-list items */
-.keyword-list .keyword.selected {
-    background-color: #755B5B;
-}
-
-/* Define styles for button */
-button {
-    padding: 10px 20px;
-    background-color: #755B5B;
-    color: #C8BBBB;
-    border: none;
-    cursor: pointer;
-}
-
-/* Define hover styles for button */
-button:hover {
-    background-color: #755B5B;
-}
-
-/* Media Query for iPad */
-@media only screen 
-    and (min-device-width: 768px) 
-    and (max-device-width: 1024px) 
-    and (-webkit-min-device-pixel-ratio: 1) {
-    .content-container {
-        margin: 0 auto;
-        max-width: 768px;
-    }
-}
-
-/* Media Query for iPhone */
-@media only screen 
-    and (max-device-width: 480px) {
-    .content-container {
-        margin: 0 auto;
-        max-width: 320px;
-    }
-}
-.keyword.html {
-    background: #fff;
-    border: 2px solid #555;
-    border-radius: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    outline: none;
-    font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color and background */
-}
-
-.keyword.html:active, .keyword.active {
-    background: #555;
-    color: #fff; /* Ensures text is white when the button is active */
-}
-
-
-
-.keywords {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow keyword buttons to wrap onto new lines */
-    justify-content: center; /* Center buttons horizontally */
-    gap: 10px; /* Space between buttons */
-    margin-bottom: 20px; /* Space below the keyword area */
-}
-
-.keyword {
-    border: none; /* Removes border */
-    background-color: #eee; /* Light grey background */
-    color: #333; /* Darker text for contrast */
-    padding: 10px 20px;
-}
+    border-radius: 20px;}
