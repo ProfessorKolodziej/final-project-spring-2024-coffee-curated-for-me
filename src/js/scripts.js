@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         performRedirection(['intense', 'conversations', 'quick'], 'bitter.html');
         performRedirection(['friendly', 'light', 'cultural'], 'post.html');
         performRedirection(['dark', 'cultural', 'friendly'], 'davelle.html');
-        performRedirection(['light', 'cute', 'friendly'], 'sweet.html');
-
+        performRedirection(['light', 'friendly', 'cute'], 'post.html');
 
     });
 
