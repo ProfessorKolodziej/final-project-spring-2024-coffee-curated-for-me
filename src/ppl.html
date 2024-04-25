@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Curated for Me Final Project</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font.css"> 
+    <style>
+        body {
+            background-color: #C8BBBB;
+            font-family: "Outfit", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: "Sansita", sans-serif;
+            color: #755B5B;
+            margin-bottom: 0.5em;
+        }
+        .content-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .order-image {
+            width: 50%; 
+            max-width: 300px; 
+            display: block;
+            margin: 0 auto; 
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .home-button {
+            background-color: #F1EDE9; 
+            border: none;
+            color: #755B5B; 
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold; 
+            text-transform: uppercase; 
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: inline-block; 
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-container">
+    <h1>Here's Your Coffee Order</h1>
+    <img src="images/ppl.png" alt="order-image-1" class="order-image">
+</main>
+
+<div class="footer">
+    <button class="home-button">Home</button>
+</div>
+
+<!-- Linking the JavaScript file -->
+<script src="js/scripts.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const keywords = document.querySelectorAll('.keyword');
+    let selectedKeywords = [];
+
+    keywords.forEach(button => {
+        button.addEventListener('click', function() {
+            const keywordText = this.textContent.toLowerCase();
+            this.classList.toggle('active'); 
+            if (selectedKeywords.includes(keywordText)) {
+                selectedKeywords = selectedKeywords.filter(k => k !== keywordText); 
+            } else {
+                selectedKeywords.push(keywordText); 
+            }
+        });
+    });
+
+    document.querySelector('.home-button').addEventListener('click', function() {
+        const coffeeKeywords = ['quick', 'cozy', 'intense'].sort();
+        const currentSelection = selectedKeywords.sort();
+
+       
+        if (JSON.stringify(currentSelection) === JSON.stringify(requiredKeywords)) {
+            window.location.href = 'ppl.html'; 
+        }
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.home-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; 
+        });
+    
+        const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
+        console.log('Selected Keywords:', selectedKeywords);
+    });
+    </script>
+</body>
+</html>
