@@ -6,60 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Update your description here" />
     <title>Coffee Curated for Me Final Project</title>
-    <!-- Linking the CSS file -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Linking the font file -->
-    <link rel="stylesheet" href="path/to/font.css"> <!-- Add your font CSS file here -->
-    <!-- Adding inline CSS for background color and fonts -->
+    <link rel="stylesheet" href="path/to/font.css">
     <style>
-        /* Error: There is no inline CSS in the HTML. */
-        /* Error: There is no CSS in a style tag. */
         body {
             background-color: #C8BBBB;
             font-family: "Outfit", sans-serif;
-            text-align: center; /* Center all text */
+            text-align: center;
         }
-    
-        h1 {
+        h1, h2 {
             font-family: "Sansita", sans-serif;
-            color: #755B5B; /* Specific color for the title */
-            margin-bottom: 0.5em; /* Adjust space between h1 and h2 */
+            color: #755B5B;
         }
-    
-        h2 {
-            color: #755B5B; /* Same color for the subtitle */
-            font-family: "Sansita", sans-serif; /* Apply Sansita font */
-        }
-    
+        h1 { margin-bottom: 0.5em; }
         .container {
-            max-width: 600px; /* Set max width for the container */
-            margin: 0 auto; /* Center the container */
-            padding: 2em; /* Padding around the content */
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
         }
-    
+        .enter, .keyword {
+            padding: 10px 30px;
+            margin-top: 2em;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
         .enter {
-            background-color: #FFFFFF; /* Background color */
+            background-color: #F1EDE9; /* Light beige background */
+            color: #755B5B; /* Dark brown text */
             border: none; /* No border */
-            color: #755B5B; /* Text color */
-            padding: 10px 30px; /* Padding inside the button */
-            font-size: 1em; /* Font size */
-            border-radius: 30px; /* Rounded borders */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-            transition: background-color 0.3s, box-shadow 0.3s; /* Transition for effects */
-            margin-top: 2em; /* Space above the button */
         }
-    
         .enter:hover {
-            background-color: #755B5B; /* Color change on hover */
-            color: #FFFFFF; /* Text color change on hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
-            cursor: pointer; /* Change cursor to indicate button */
+            background-color: #D3CCC5; /* Darker beige on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
         }
-    
-        /* If you need specific styles for your buttons when they are active */
-        .keyword.active, .keyword:active {
-            background-color: #755B5B; /* Background color for active state */
-            color: #FFFFFF; /* Text color for active state */
+        .keyword.active {
+            background-color: #755B5B;
+            color: #FFFFFF;
         }
     </style>    
 </head>
@@ -85,13 +69,40 @@
             <button class="keyword">Cultural</button>
         </div>
         <footer>
-            <div href="Generating.html" style="text-decoration: none;">
-                <button class="enter">ENTER</button>
-            </div>
+            <button class="enter">ENTER</button>
         </footer>
         <img src="images/generating.png" alt="Side Logo">
-    
     </div>
-    <script src="js/scripts.js"></script>
+
+<!-- Linking the JavaScript file -->
+<script src="js/scripts.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const keywords = document.querySelectorAll('.keyword');
+    const enterButton = document.querySelector('.enter');
+    let selectedKeywords = [];
+
+    keywords.forEach(button => {
+        button.addEventListener('click', function() {
+            const keywordText = this.textContent.toLowerCase();
+            const isActive = this.classList.toggle('active');
+            if (isActive) {
+                selectedKeywords.push(keywordText);
+            } else {
+                selectedKeywords = selectedKeywords.filter(k => k !== keywordText);
+            }
+        });
+    });
+
+    enterButton.addEventListener('click', function() {
+        const requiredKeywords = ['late-night', 'fun', 'intense'].sort();
+        const currentSelection = selectedKeywords.sort();
+
+        if (JSON.stringify(currentSelection) === JSON.stringify(requiredKeywords)) {
+            window.location.href = 'sip&play.html'; // Ensure this path is correct
+        }
+    });
+});
+</script>
 </body>
 </html>

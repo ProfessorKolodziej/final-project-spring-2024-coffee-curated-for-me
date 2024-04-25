@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Update your description here" />
+    <title>Coffee Curated for Me Final Project</title>
+    <!-- Linking the CSS file -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Linking the font file -->
+    <link rel="stylesheet" href="path/to/font.css"> <!-- Replace with your actual path to font CSS -->
+    <style>
+        body {
+            background-color: #C8BBBB;
+            font-family: "Outfit", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: "Sansita", sans-serif;
+            color: #755B5B;
+            margin-bottom: 0.5em;
+        }
+        .content-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .order-image {
+            width: 50%; /* Adjust image size */
+            max-width: 300px; /* Add max-width to control image size */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .home-button {
+            background-color: #F1EDE9; /* Change background color */
+            border: none;
+            color: #755B5B; /* Set text color */
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold; /* Make text bold */
+            text-transform: uppercase; /* Capitalize text */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: inline-block; /* Ensure proper spacing */
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .home-button:hover {
+            background-color: #ccc; /* Slightly lighter shade on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-container">
+    <h1>Here's Your Coffee Order</h1>
+    <img src="images/land to sea receipt.png" alt="order-image-1" class="order-image">
+</main>
+
+<div class="footer">
+    <button class="home-button">Home</button>
+</div>
+
+<!-- Linking the JavaScript file -->
+<script src="js/scripts.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve selected keywords from local storage, if they're stored there
+    const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
+
+    // Do something with the selected keywords if needed
+    console.log('Selected Keywords:', selectedKeywords);
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Attach event listener to the 'Home' button
+        document.querySelector('.home-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    
+        // Retrieve and handle selected keywords from local storage if needed
+        const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
+        console.log('Selected Keywords:', selectedKeywords);
+    
+        // Any other DOMContentLoaded logic can go here
+    });
+    </script>
+    
+
+</body>
+</html>
