@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const coffeeKeywords = ['light', 'cultural', 'conversations'].sort();
         const sipKeywords = ['late-night', 'fun', 'intense'].sort();
         const phinKeywords = ['cozy', 'quick', 'conversations'].sort();
-        
-        const sortedSelection = [...selectedKeywords].sort();
+        const mudKeywords = ['dark', 'late-night', 'love'].sort();
 
         // Check if the selected keywords match any of the groups
         if (sortedSelection.length === 3) {
@@ -45,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (compareArrays(sortedSelection, phinKeywords)) {
                 console.log('Redirecting to phin.html');
                 window.location.href = 'phin.html';
+            } else if (compareArrays(sortedSelection, mudKeywords)) {
+                console.log('Redirecting to mud.html');
+                window.location.href = 'mud.html';
             } else {
                 console.log('Redirecting to index.html');
                 window.location.href = 'index.html';
