@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         performRedirection(['cozy', 'quick', 'conversations'], 'phin.html');
         performRedirection(['dark', 'late-night', 'love'], 'mud.html');
         performRedirection(['intense', 'conversations', 'quick'], 'bitter.html');
-        performRedirection(['friendly', 'light', 'cultural'], '.postcard.html');
+        performRedirection(['friendly', 'light', 'cultural'], 'post.html');
     });
 
     function performRedirection(requiredKeywords, redirectUrl) {
