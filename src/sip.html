@@ -11,6 +11,7 @@
     <!-- Linking the font file -->
     <link rel="stylesheet" href="path/to/font.css"> <!-- Replace with your actual path to font CSS -->
     <style>
+        /* Inline CSS */
         body {
             background-color: #C8BBBB;
             font-family: "Outfit", sans-serif;
@@ -61,10 +62,11 @@
 
 <main class="content-container">
     <h1>Here's Your Coffee Order</h1>
-    <img src="images/land to sea receipt.png" alt="order-image-1" class="order-image">
+    <img src="images/sip&play.png" alt="order-image-1" class="order-image">
 </main>
 
 <div class="footer">
+    <!-- This button is used for navigation upon keyword selection -->
     <button class="home-button">Home</button>
 </div>
 
@@ -89,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelector('.home-button').addEventListener('click', function() {
-        const coffeeKeywords = ['light', 'cultural', 'conversatins'].sort();
+        const sipKeywords = ['late-night', 'intense', 'fun'].sort();
         const currentSelection = selectedKeywords.sort();
 
         // Check if the selected keywords match the required keywords
         if (JSON.stringify(currentSelection) === JSON.stringify(requiredKeywords)) {
-            window.location.href = 'coffee.html'; // Redirect to coffee.html
+            window.location.href = 'sip.html'; // Redirect to sip.html
         }
         // No action if the required keywords are not selected
     });
@@ -107,11 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'index.html'; // Redirect to the home page
         });
     
+        // Retrieve and handle selected keywords from local storage if needed
         const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
         console.log('Selected Keywords:', selectedKeywords);
     
         // Any other DOMContentLoaded logic can go here
     });
     </script>
+
 </body>
 </html>
