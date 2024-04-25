@@ -9,55 +9,39 @@
 // Keyword interactions and navigates to specific pages based on selected keywords.
 document.addEventListener('DOMContentLoaded', function() {
     const keywords = document.querySelectorAll('.keyword');
-    const enterButton = document.querySelector('.enter');
+    const coffeeButton = document.querySelector('.enter');
+    const homeButton = document.querySelector('.home-button'); // Assuming this is another button meant for another action
     let selectedKeywords = [];
 
+    // Toggle keyword active state and update the selection array
     keywords.forEach(button => {
         button.addEventListener('click', function() {
             const keywordText = this.textContent.toLowerCase().trim();
             this.classList.toggle('active');
-            
             if (this.classList.contains('active')) {
                 selectedKeywords.push(keywordText);
             } else {
                 selectedKeywords = selectedKeywords.filter(k => k !== keywordText);
             }
-
-            console.log(selectedKeywords); 
         });
     });
 
-    enterButton.addEventListener('click', function() {
-        const coffeeKeywords = ['light', 'cultural', 'conversations'].sort();
-        const sipKeywords = ['late-night', 'fun', 'intense'].sort();
-        const phinKeywords = ['cozy', 'quick', 'conversations'].sort();
-        const mudKeywords = ['dark', 'late-night', 'love'].sort();
-
-        // Check if the selected keywords match any of the groups
-        if (sortedSelection.length === 3) {
-            if (compareArrays(sortedSelection, coffeeKeywords)) {
-                console.log('Redirecting to coffee.html');
-                window.location.href = 'coffee.html';
-            } else if (compareArrays(sortedSelection, sipKeywords)) {
-                console.log('Redirecting to sip.html');
-                window.location.href = 'sip.html';
-            } else if (compareArrays(sortedSelection, phinKeywords)) {
-                console.log('Redirecting to phin.html');
-                window.location.href = 'phin.html';
-            } else if (compareArrays(sortedSelection, mudKeywords)) {
-                console.log('Redirecting to mud.html');
-                window.location.href = 'mud.html';
-            } else {
-                console.log('Redirecting to index.html');
-                window.location.href = 'index.html';
-            }
-        } else {
-            console.log('Not enough keywords selected');
-            alert('Please select exactly three keywords.');
-        }
+    // Event listener for entering the coffee related page
+    coffeeButton.addEventListener('click', function() {
+        performRedirection(['light', 'cultural', 'conversations'], 'coffee.html');
+        performRedirection(['late-night', 'fun', 'intense'], 'sip.html');
+        performRedirection(['cozy', 'quick', 'conversations'], 'phin.html');
+        performRedirection(['dark', 'late-night', 'love'], 'mud.html');
+        performRedirection(['intense', 'conversations', 'quick'], 'bitter.html');
     });
-});
 
-function compareArrays(arr1, arr2) {
-    return arr1.every((value, index) => value === arr2[index]);
-}
+    function performRedirection(requiredKeywords, redirectUrl) {
+        const sortedSelection = [...selectedKeywords].sort();
+        requiredKeywords.sort();
+
+        if (sortedSelection.length === requiredKeywords.length && sortedSelection.every((value, index) => value === requiredKeywords[index])) {
+            console.log('Redirecting to ' + redirectUrl);
+            window.location.href = redirectUrl;
+        }
+    }
+});
