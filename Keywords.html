@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Curated for Me Final Project</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font.css">
+    <!-- Linking the JavaScript file -->
+<script src="js/scripts.js"></script>  
+    <style>
+        h1 { margin-bottom: 0.5em; }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .enter, .keyword {
+            padding: 10px 30px;
+            margin-top: 2em;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .enter {
+            background-color: #F1EDE9;
+            color: #755B5B; 
+            border: none; 
+        }
+        .enter:hover {
+            background-color: #D3CCC5; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+        }
+        .keyword.active {
+            background-color: #755B5B;
+            color: #FFFFFF;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coffee Curated For Me</h1>
+            <h2>Pick 3 keywords</h2>
+        </header>
+        <div class="keywords">
+            <button class="keyword">Love</button>
+            <button class="keyword">Friendly</button>
+            <button class="keyword">Light</button>
+            <button class="keyword">Study</button>
+            <button class="keyword">Cute</button>
+            <button class="keyword">Late-Night</button>
+            <button class="keyword">Conversations</button>
+            <button class="keyword">Fun</button>
+            <button class="keyword">Dark</button>
+            <button class="keyword">Cozy</button>
+            <button class="keyword">Intense</button>
+            <button class="keyword">Quick</button>
+            <button class="keyword">Cultural</button>
+        </div>
+        <footer>
+            <button class="enter">ENTER</button>
+        </footer>
+        <img src="images/generating.png" alt="Side Logo">
+    </div>
+</body>
+</html>

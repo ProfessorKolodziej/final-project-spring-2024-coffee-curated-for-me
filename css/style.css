@@ -1,0 +1,80 @@
+body {
+    background-color: #C8BBBB;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Sansita", sans-serif;
+    color: #755B5B;
+    margin-bottom: 0.5em;
+}
+.container, .content-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2em;
+    background-color: #C8BBBB;
+}
+.enter, .keyword, button {
+    padding: 10px 30px;
+    font-size: 1em;
+    border-radius: 30px;
+    background-color: #F1EDE9;
+    color: #755B5B;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.enter:hover, .keyword:hover, button:hover {
+    background-color: #D3CCC5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.keyword.active, .keyword.selected {
+    background-color: #755B5B;
+    color: #FFFFFF;
+}
+ul, li {
+    list-style-type: none;
+    color: #755B5B;
+    font-family: "Sansita", sans-serif;
+}
+.keyword-list .keyword {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #755B5B;
+    border-radius: 20px;
+}
+
+/* Media Query for iPads (portrait and landscape orientations) */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .container, .content-container {
+        padding: 5% 10%; /* More responsive padding */
+    }
+    .enter, .keyword, button {
+        padding: 15px 40px; /* Larger tap targets for easier interaction */
+    }
+    h1 {
+        font-size: 24px; /* Larger font size for better readability */
+    }
+}
+
+/* Media Query for iPhone SE */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .container, .content-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 10px auto; /* Less margin for more space */
+    }
+    .enter, .keyword, button {
+        padding: 12px 36px; /* Adjust button sizing for small screens */
+    }
+    h1, h2, h3, h4, h5 {
+        font-size: 18px; /* Smaller font size to fit small screens */
+    }
+    .keyword-list .keyword {
+        padding: 3px 7px; /* Smaller keywords for compact display */
+    }
+}
