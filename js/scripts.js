@@ -71,4 +71,12 @@
         return false;
     }
 });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.home-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; 
+        });
+    
+        const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
+        console.log('Selected Keywords:', selectedKeywords);
+    });
 
