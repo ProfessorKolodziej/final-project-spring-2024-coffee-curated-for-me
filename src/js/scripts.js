@@ -5,7 +5,7 @@
 // - Do not use onclick - use addEventListener instead
 // - Run npm run test regularly to check autograding
 // - You'll need to link this file to your HTML :)
-document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
     const keywords = document.querySelectorAll('.keyword');
     const enterButton = document.querySelector('.enter');
     let selectedKeywords = [];
@@ -71,3 +71,4 @@ document.addEventListener('DOMContentLoaded', function() {
         return false;
     }
 });
+
