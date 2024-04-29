@@ -44,41 +44,6 @@ ul, li {
     background-color: #755B5B;
     border-radius: 20px;
 }
-
-/* Media Query for iPads */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-    .container, .content-container {
-        padding: 5% 10%; 
-    }
-    .enter, .keyword, button {
-        padding: 15px 40px; 
-    }
-    h1 {
-        font-size: 24px; 
-    }
-}
-
-/* Media Query for iPhone SE */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-    .container, .content-container {
-        padding: 10px; 
-        margin: 10px auto; 
-    }
-    .enter, .keyword, button {
-        padding: 12px 36px; 
-    }
-    h1, h2, h3, h4, h5 {
-        font-size: 18px; 
-    }
-    .keyword-list .keyword {
-        padding: 3px 7px; 
-    }
-}
-
 body {
     background-color: #C8BBBB;
     font-family: "Outfit", sans-serif;
@@ -172,4 +137,45 @@ h1 { margin-bottom: 0.5em; }
 .keyword.active {
     background-color: #755B5B;
     color: #FFFFFF;
+}
+
+/* Media Query for iPads */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .container, .content-container {
+        padding: 5% 10%; 
+    }
+    .enter, .keyword, button {
+        padding: 15px 40px; 
+    }
+    h1 {
+        font-size: 24px; 
+    }
+}
+
+/* Media Query for iPhone SE */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (-webkit-min-device-pixel-ratio: 2),
+only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation : landscape) {
+    .container, .content-container {
+        padding: 10px; 
+        margin: 10px auto; 
+    }
+    .enter, .keyword, button {
+        padding: 12px 36px; 
+    }
+    h1, h2, h3, h4, h5 {
+        font-size: 18px; 
+    }
+    .keyword-list .keyword {
+        padding: 3px 7px; 
+    }
 }
