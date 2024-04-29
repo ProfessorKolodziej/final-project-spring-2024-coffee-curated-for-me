@@ -63,44 +63,5 @@
 
 <!-- Linking the JavaScript file -->
 <script src="js/scripts.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const keywords = document.querySelectorAll('.keyword');
-    let selectedKeywords = [];
-
-    keywords.forEach(button => {
-        button.addEventListener('click', function() {
-            const keywordText = this.textContent.toLowerCase();
-            this.classList.toggle('active'); 
-            if (selectedKeywords.includes(keywordText)) {
-                selectedKeywords = selectedKeywords.filter(k => k !== keywordText); 
-            } else {
-                selectedKeywords.push(keywordText); 
-            }
-        });
-    });
-
-    document.querySelector('.home-button').addEventListener('click', function() {
-        const coffeeKeywords = ['light', 'friendly', 'cute'].sort();
-        const currentSelection = selectedKeywords.sort();
-
-       
-        if (JSON.stringify(currentSelection) === JSON.stringify(requiredKeywords)) {
-            window.location.href = 'sweet.html'; 
-        }
-    });
-});
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.home-button').addEventListener('click', function() {
-            window.location.href = 'index.html'; 
-        });
-    
-        const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
-        console.log('Selected Keywords:', selectedKeywords);
-    });
-    </script>
-
 </body>
 </html>
