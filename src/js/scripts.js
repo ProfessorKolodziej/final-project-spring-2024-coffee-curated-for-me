@@ -47,7 +47,8 @@
             { keywords: ['light', 'friendly', 'cute'], url: 'post.html' },
             { keywords: ['study', 'cute', 'cozy'], url: 'bro.html' },
             { keywords: ['cute', 'friendly', 'cultural'], url: 'miso.html' },
-            { keywords: ['quick', 'cozy', 'intense'], url: 'ppl.html' }
+            { keywords: ['quick', 'cozy', 'intense'], url: 'ppl.html' },
+            { keywords: ['cozy', 'dark', 'friendly'], url: 'lostdraft.html' }
         ];
 
         let redirectionMade = false;
@@ -79,4 +80,3 @@
         const selectedKeywords = JSON.parse(localStorage.getItem('selectedKeywords')) || [];
         console.log('Selected Keywords:', selectedKeywords);
     });
-
