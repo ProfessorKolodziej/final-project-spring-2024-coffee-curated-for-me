@@ -42,7 +42,7 @@
             { keywords: ['cozy', 'quick', 'conversations'], url: 'phin.html' },
             { keywords: ['dark', 'late-night', 'love'], url: 'mud.html' },
             { keywords: ['intense', 'conversations', 'quick'], url: 'bitter.html' },
-            { keywords: ['friendly', 'light', 'cultural'], url: 'post.html' },
+            { keywords: ['cute', 'light', 'cultural'], url: 'post.html' },
             { keywords: ['dark', 'cultural', 'friendly'], url: 'davelle.html' },
             { keywords: ['light', 'friendly', 'cute'], url: 'post.html' },
             { keywords: ['study', 'cute', 'cozy'], url: 'bro.html' },
