@@ -38,7 +38,7 @@
         // Define the keyword sets for redirection
         const redirections = [
             { keywords: ['light', 'cultural', 'conversations'], url: 'coffee.html' },
-            { keywords: ['late-night', 'fun', 'intense'], url: 'sip.html' },
+            { keywords: ['late-night', 'fun', 'love'], url: 'sip.html' },
             { keywords: ['cozy', 'quick', 'conversations'], url: 'phin.html' },
             { keywords: ['dark', 'late-night', 'love'], url: 'mud.html' },
             { keywords: ['intense', 'conversations', 'quick'], url: 'bitter.html' },
